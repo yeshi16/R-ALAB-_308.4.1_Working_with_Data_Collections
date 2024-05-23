@@ -152,3 +152,29 @@ if (id || names || occupation || age) {
 //     `);
 // }
 
+// Part 4: Sorting and Manipulating Data
+
+// Remove the last element from the sorted array.
+const sortedArr3 = arr3.sort(function (a, b) { return a.id - b.id });
+// console.log(sortedArr3)
+
+// Insert the following object at index 1:
+const newObj = { id: "48", name: "Barry", occupation: "Runner", age: "25" }
+sortedArr3.splice(2, 0, newObj);
+// Add the following object to the end of the array
+sortedArr3.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
+// console.log(sortedArr3)
+
+// calculate the average age of the group.
+
+let charLength2 = sortedArr3.length
+let avgAge = 0
+let ages = 0
+
+for (let i = 1; i < sortedArr3.length; i++) {
+    let age = Number(sortedArr3[i].age)
+    ages += age
+}
+avgAge = ages / charLength2
+// console.log(avgAge)
+

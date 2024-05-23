@@ -91,3 +91,64 @@ if (cell1 || cell2 || cell3 || cell4) {
 
 // console.log(arr2)
 
+// Part 3: Transforming Data
+
+let id = "";
+let names = "";
+let occupation = "";
+let age = "";
+let commaCount3 = 1;
+let arr3 = [];
+
+for (let i = 0; i < str.length; i++) {
+    let char = str[i]
+
+
+    if (char == '\n') {
+        const row2 = {
+            id: id,
+            name: names,
+            occupation: occupation,
+            age: age
+        }
+        arr3.push(row2);
+
+        id = ""
+        names = "";
+        occupation = "";
+        age = "";
+        commaCount3 = 1;
+
+    } else if (char === ',') {
+        commaCount3++;
+    } else {
+        if (commaCount3 == 1) {
+            id += char;
+        } else if (commaCount3 == 2) {
+            names += char;
+        } else if (commaCount3 == 3) {
+            occupation += char;
+        } else if (commaCount3 == 4) {
+            age += char;
+        }
+    }
+
+}
+
+if (id || names || occupation || age) {
+    const row2 = {
+        id: id,
+        name: names,
+        occupation: occupation,
+        age: age
+    }
+    arr3.push(row2)
+}
+
+// console.log(arr3)
+// for (let i = 0; i < arr3.length; i++) {
+//     console.log(` 
+//         id: "${arr3[i].id}", name: "${arr3[i].name}", occupation: "${arr3[i].occupation}", age: "${arr3[i].age}"
+//     `);
+// }
+

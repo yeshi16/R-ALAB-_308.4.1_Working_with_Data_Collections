@@ -153,7 +153,6 @@ if (id || names || occupation || age) {
 // }
 
 // Part 4: Sorting and Manipulating Data
-
 // Remove the last element from the sorted array.
 const sortedArr3 = arr3.sort(function (a, b) { return a.id - b.id });
 // console.log(sortedArr3)

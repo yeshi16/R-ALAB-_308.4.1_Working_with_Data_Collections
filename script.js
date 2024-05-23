@@ -178,3 +178,19 @@ for (let i = 1; i < sortedArr3.length; i++) {
 avgAge = ages / charLength2
 // console.log(avgAge)
 
+
+// Part 5: Full Circle
+// transform the final set of data back into CSV format.
+
+const csvRows = [];
+const headers = Object.keys(sortedArr3[0])
+for (const row of sortedArr3) {
+    const vals = headers.map(header => {
+        const val = row[header]
+        return `"${val}"`
+    })
+    // To add, separator between each value
+    csvRows.push(vals.join(','));
+}
+// console.log(csvRows)
+
